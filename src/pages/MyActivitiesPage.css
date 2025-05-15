@@ -1,0 +1,117 @@
+/* หน้าหลัก container */
+.my-activities-container {
+  background-color: #f0f2f5;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* หัวข้อบาร์ */
+.header-bar {
+  background-color: #f79c42;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000;
+  width: fit-content;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* รายการกิจกรรม */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* การ์ดกิจกรรม */
+.activity-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ช่องหมวดหมู่ซ้าย */
+.activity-left {
+  background-color: #b6f7a1; /* ✅ สีเขียวอ่อนตรงกับภาพ */
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* กล่องข้อความหมวด */
+.category-box {
+  writing-mode: horizontal-tb;
+  transform: none;
+  padding: 0.5rem;
+}
+
+/* เนื้อหากลาง */
+.activity-center {
+  flex: 1;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* หัวข้อกิจกรรม */
+.activity-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* คำอธิบาย */
+.activity-description {
+  margin: 0.35rem 0;
+  color: #555;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* วันที่ */
+.date-text {
+  color: #e53935;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+/* ปุ่มด้านขวา */
+.activity-right {
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.detail-button {
+  background-color: #333;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.detail-button:hover {
+  background-color: #000;
+}

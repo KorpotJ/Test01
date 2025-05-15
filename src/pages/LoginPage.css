@@ -1,0 +1,95 @@
+.login-container {
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  background: #f8fafc;
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.login-subtext {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-form label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 500;
+}
+
+.login-form input[type=\"email\"],
+.login-form input[type=\"password\"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.remember-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.login-button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #1d4ed8;
+}
+
+.signup-row {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.signup-row a {
+  margin-left: 0.5rem;
+  color: #2563eb;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-row a:hover {
+  text-decoration: underline;
+}
