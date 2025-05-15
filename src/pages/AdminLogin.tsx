@@ -1,6 +1,7 @@
 // src/pages/AdminLogin.tsx
 
 import React, { useState } from "react";
+import axios from "axios";
 import "./AdminLogin.css";
 
 const AdminLogin = () => {
@@ -18,14 +19,36 @@ const AdminLogin = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.acceptedTerms) {
       alert("You must accept the terms and conditions.");
       return;
     }
 
-    console.log("Login data:", formData);
+    try {
+      const response = await axios.post("http://localhost:3001/auth/login", {
+        email: formData.email,
+        password: formData.password,
+      });
+
+      console.log("Login successful:", response.data);
+
+      // ตัวอย่าง: บันทึก token ลง localStorage
+      localStorage.setItem("token", response.data.token);
+
+      alert("Login successful");
+
+      // เปลี่ยนเส้นทางหลัง login สำเร็จ
+      window.location.href = "/admin/dashboard";
+
+    } catch (error: any) {
+      if (error.response && error.response.data) {
+        alert(error.response.data.message);
+      } else {
+        alert("An error occurred. Please try again.");
+      }
+    }
   };
 
   return (
