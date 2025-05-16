@@ -34,12 +34,13 @@ const AdminLogin = () => {
 
       console.log("Login successful:", response.data);
 
- 
+      // ตัวอย่าง: บันทึก token ลง localStorage
       localStorage.setItem("token", response.data.token);
 
       alert("Login successful");
 
-      // window.location.href = "/admin/dashboard";
+      // เปลี่ยนเส้นทางหลัง login สำเร็จ
+      window.location.href = "/admin/dashboard";
 
     } catch (error: any) {
       if (error.response && error.response.data) {
